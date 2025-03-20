@@ -188,7 +188,7 @@ exports.userTopUp = async function userTopUp(req, res) {
 
         const cariuser = await pg.query("SELECT * FROM users WHERE id = $1", [id]);
         if(cariuser.rowCount == 0){
-            return res.status(404).json({ message: 'User not found' });
+            return res.status(404).json({ success: false, message: 'User not found', payload:null });
         }
         const user = cariuser.rows[0];
 
