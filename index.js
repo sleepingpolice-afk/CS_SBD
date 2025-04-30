@@ -15,7 +15,7 @@ const app = express();
 
 var corsOption = {
   //origin: 'http://localhost:5433/',
-  origin: 'http://os.netlab.com/',
+  origin: '*',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   preflightContinue: false,
   optionsSuccessStatus: 204
